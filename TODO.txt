@@ -1,0 +1,26 @@
+// TODO Step 1 : HomeController
+//      [ ] Home
+//      [ ] About
+//      [ ] Contact
+//      [ ] Legal mentions
+//      [ ] Accessibility
+//      [ ] Confidentiality
+
+// TODO Step 2 : DocController
+//      [ ] Search Document / Show Documents
+//      [ ] Show Document
+//      [ ] Add Document / Edit Document
+//      [ ] Delete Document
+
+// TODO Step 3 : CommentController
+//      [ ] Edit Comment
+//      [ ] Delete Comment
+
+// TODO Step 3 : SecurityController
+//      [ ] Register User
+//      [ ] Login User
+//      [ ] Logout User
+//      [ ] Edit User
+//      [ ] Delete User
+//      [ ] Show User Dashboard
+//      [ ] Show User Profile
