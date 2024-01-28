@@ -24,3 +24,9 @@
 //      [ ] Delete User
 //      [ ] Show User Dashboard
 //      [ ] Show User Profile
+
+// TODO Mentions Légales : vidéos Pexels 
+//      [ ] Vidéo de fauxels: https://www.pexels.com/fr-fr/video/groupe-de-personnes-partageant-des-idees-au-travail-3252291/
+
+// TODO Vidéos
+//      [ ] Vidéo illustrative "Comment ça marche ?" pour page d'accueil
