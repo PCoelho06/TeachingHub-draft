@@ -15,11 +15,15 @@
 			{% endblock %}
 		{% endblock %}
 	</head>
-	<body>
+	<body class="d-flex flex-column">
+
+		{% include('_flash-messages.html.twig') %}
+
 		{% include('_header.html.twig') %}
 
-		{% block body %}{% endblock %}
+		<main class="mt-auto mb-auto"> {% block body %}{% endblock %}
+			</main>
 
-		{% include('_footer.html.twig') %}
-	</body>
-</html>
+			{% include('_footer.html.twig') %}
+		</body>
+	</html>

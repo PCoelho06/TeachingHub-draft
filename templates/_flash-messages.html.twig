@@ -1,0 +1,19 @@
+{% for label, messages in app.flashes %}
+	{% if label in ['success', 'danger', 'warning', 'info'] %}
+		{% for message in messages %}
+			<div class="alert alert-{{ label }} alert-dismissible fade show" role="alert">
+				{% if label == 'success' %}
+					<i class="fa-solid fa-circle-check"></i>
+				{% elseif label == 'danger' %}
+					<i class="fa-solid fa-circle-xmark"></i>
+				{% elseif label ==  'warning' %}
+					<i class="fa-solid fa-circle-exclamation"></i>
+				{% else %}
+					<i class="fa-solid fa-circle-info"></i>
+				{% endif %}
+				{{ message }}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		{% endfor %}
+	{% endif %}
+{% endfor %}

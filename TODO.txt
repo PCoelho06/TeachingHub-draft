@@ -30,3 +30,6 @@
 
 // TODO Vidéos
 //      [ ] Vidéo illustrative "Comment ça marche ?" pour page d'accueil
+
+// TODO Effets & animations
+//      [ ] Effet soulignement liens
