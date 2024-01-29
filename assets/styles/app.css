@@ -248,6 +248,11 @@ a {
     transform: translateX(100%);
 }
 
+.feature-img {
+    display: block;
+    transform: translateX(25%);
+}
+
 #background-video {
     height: 100%;
     width: 100%;
