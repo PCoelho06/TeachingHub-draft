@@ -74,6 +74,25 @@ a {
     letter-spacing: -0.3rem;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border-radius: 0;
+    border: 2px solid var(--neutral-900-color);
+}
+
+label,
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+}
+
+.btn-lg {
+    border-radius: 0;
+    padding: 1rem 2rem;
+}
+
 /***** NAVBAR *****/
 
 .navbar-brand {

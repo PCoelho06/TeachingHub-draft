@@ -1,5 +1,5 @@
 // TODO Step 1 : HomeController
-//      [ ] Home
+//      [x] Home
 //      [ ] About
 //      [ ] Contact
 //      [ ] Legal mentions
@@ -17,9 +17,9 @@
 //      [ ] Delete Comment
 
 // TODO Step 3 : SecurityController
-//      [ ] Register User
-//      [ ] Login User
-//      [ ] Logout User
+//      [x] Register User
+//      [x] Login User
+//      [x] Logout User
 //      [ ] Edit User
 //      [ ] Delete User
 //      [ ] Show User Dashboard
