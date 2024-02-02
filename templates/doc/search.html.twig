@@ -1,49 +1,64 @@
-{% extends 'base.html.twig' %} {% block title %}Chercher un document{% endblock
-%} {% block body %}
-<div class="container my-5">
-  <h1 class="page-title">Rechercher un document</h1>
+{% extends 'base.html.twig' %}
+{% block title %}Chercher un document
+{% endblock
+%}
+{% block body %}
+	<div class="container my-5">
+		<h1 class="page-title">Rechercher un document</h1>
 
-  <form action="#" method="get" class="my-5">
-    <div
-      class="d-flex justify-content-between align-items-center w-100 gap-3 mt-3 mb-5"
-    >
-      <select name="type" id="type" class="form-control">
-        <option selected disabled>Type de document</option>
-        {% for type in types %}
-        <option value="{{ type.id }}">{{ type.name }}</option>
-        {% endfor %}
-      </select>
-      <select name="level" id="level" class="form-control">
-        <option selected disabled>Niveau</option>
-        {% for level in levels %}
-        <option value="{{ level.id }}">{{ level.name }}</option>
-        {% endfor %}
-      </select>
-      <select name="subject" id="subject" class="form-control">
-        <option selected disabled>Matière</option>
-        {% for subject in subjects %}
-        <option value="{{ subject.id }}">{{ subject.name }}</option>
-        {% endfor %}
-      </select>
-      <select name="theme" id="theme" class="form-control">
-        <option selected disabled>Thématique</option>
-        {% for theme in themes %}
-        <option value="{{ theme.id }}">{{ theme.name }}</option>
-        {% endfor %}
-      </select>
-    </div>
-    <input
-      type="text"
-      class="form-control my-5"
-      name="search"
-      id="search"
-      placeholder="Entrez ici les termes de votre recherche"
-    />
-    <input
-      type="submit"
-      class="btn btn-lg btn-primary d-block mx-auto"
-      value="Rechercher un document"
-    />
-  </form>
-</div>
+		{# <form action="#" method="post" class="my-5">
+				    <div
+				      class="d-flex justify-content-between align-items-center w-100 gap-3 mt-3 mb-5"
+				    >
+				      <select name="type" id="type" class="form-control">
+				        <option selected disabled>Type de document</option>
+				        {% for type in types %}
+				        <option value="{{ type.id }}">{{ type.name }}</option>
+				        {% endfor %}
+				      </select>
+				      <select name="level" id="level" class="form-control">
+				        <option selected disabled>Niveau</option>
+				        {% for level in levels %}
+				        <option value="{{ level.id }}">{{ level.name }}</option>
+				        {% endfor %}
+				      </select>
+				      <select name="subject" id="subject" class="form-control">
+				        <option selected disabled>Matière</option>
+				        {% for subject in subjects %}
+				        <option value="{{ subject.id }}">{{ subject.name }}</option>
+				        {% endfor %}
+				      </select>
+				      <select name="theme" id="theme" class="form-control">
+				        <option selected disabled>Thématique</option>
+				        {% for theme in themes %}
+				        <option value="{{ theme.id }}">{{ theme.name }}</option>
+				        {% endfor %}
+				      </select>
+				    </div>
+				    <input
+				      type="text"
+				      class="form-control my-5"
+				      name="search"
+				      id="search"
+				      placeholder="Entrez ici les termes de votre recherche"
+				    />
+				    <input
+				      type="submit"
+				      class="btn btn-lg btn-primary d-block mx-auto"
+				      value="Rechercher un document"
+				    />
+				  </form> #}
+
+		{{ form_start(form) }}
+		{{ form_row(form.type) }}
+		{{ form_row(form.level) }}
+		{{ form_row(form.subject) }}
+		{{ form_row(form.theme) }}
+		{{ form_row(form.document_title) }}
+
+		<div class="offset-lg-3 d-flex flex-column align-items-center">
+			{{ form_row(form.submit) }}
+		</div>
+		{{ form_end(form) }}
+	</div>
 {% endblock %}
