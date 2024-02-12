@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}Déposer un document
+{% endblock
+%}
+{% block body %}
+	<div class="container my-5">
+		<h1 class="page-title">Déposer un document</h1>
+
+		{{ form_start(form) }}
+		{{ form(form) }}
+			{# {{ form_row(form.type) }}
+					{{ form_row(form.level) }}
+					{{ form_row(form.subject) }}
+					{{ form_row(form.theme) }}
+					{{ form_row(form.document_title) }}
+			
+					<div class="offset-lg-3 d-flex flex-column align-items-center">
+						{{ form_row(form.submit) }}
+					</div> #}
+			{{ form_end(form) }}
+		</div>
+	{% endblock %}

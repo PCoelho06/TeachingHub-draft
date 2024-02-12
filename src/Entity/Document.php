@@ -33,6 +33,12 @@ class Document
     #[ORM\ManyToMany(targetEntity: Theme::class, inversedBy: 'documents')]
     private Collection $theme;
 
+    #[ORM\Column(length: 255)]
+    private ?string $filename = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $slug = null;
+
     public function __construct()
     {
         $this->level = new ArrayCollection();
@@ -149,6 +155,30 @@ class Document
     public function removeTheme(Theme $theme): static
     {
         $this->theme->removeElement($theme);
+
+        return $this;
+    }
+
+    public function getFilename(): ?string
+    {
+        return $this->filename;
+    }
+
+    public function setFilename(string $filename): static
+    {
+        $this->filename = $filename;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): static
+    {
+        $this->slug = $slug;
 
         return $this;
     }

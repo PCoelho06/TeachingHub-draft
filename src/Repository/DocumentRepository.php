@@ -42,26 +42,26 @@ class DocumentRepository extends ServiceEntityRepository
         }
 
         if (!is_null($docSearch->getLevel())) {
-            $result->andWhere('d.level = :level')
+            $result->andWhere($result->expr()->isMemberOf(':level', 'd.level'))
                 ->setParameter('level', $docSearch->getLevel());
         }
 
         if (!is_null($docSearch->getSubject())) {
-            $result->andWhere('d.subject = :subject')
+            $result->andWhere($result->expr()->isMemberOf(':subject', 'd.subject'))
                 ->setParameter('subject', $docSearch->getSubject());
         }
 
         if (!is_null($docSearch->getTheme())) {
-            $result->andWhere('d.theme = :theme')
+            $result->andWhere($result->expr()->isMemberOf(':theme', 'd.theme'))
                 ->setParameter('theme', $docSearch->getTheme());
         }
 
         if (!is_null($docSearch->getDocumentTitle())) {
             $result->andWhere($result->expr()->like('d.title', ':title'))
-                ->setParameter('title', $docSearch->getTheme());
+                ->setParameter('title', $docSearch->getDocumentTitle());
         }
 
-        return $result->orderBy('d.id', 'ASC')
+        return $result->orderBy('d.id', 'DESC')
             ->getQuery()
             ->getResult();
     }

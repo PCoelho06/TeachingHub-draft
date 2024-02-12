@@ -2,12 +2,13 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Document;
 use App\Entity\Type;
 use App\Entity\Level;
 use App\Entity\Subject;
+use DateTimeImmutable;
 use Doctrine\Persistence\ObjectManager;
-use Doctrine\Bundle\FixturesBundle\Fixture;
-;
+use Doctrine\Bundle\FixturesBundle\Fixture;;
 
 class DocFixtures extends Fixture
 {
@@ -21,19 +22,26 @@ class DocFixtures extends Fixture
             $level->setName($levelName);
             $manager->persist($level);
         }
-        
+
         $types = ['Cours', 'Fiche d\'exercices', 'Evaluation', 'Devoir en temps libre', 'Séquence / Chapitre'];
         foreach ($types as $typeName) {
             $type = new Type();
             $type->setName($typeName);
             $manager->persist($type);
         }
-        
+
         $subjects = ['Anglais', 'Allemand', 'Espagnol', 'Italien', 'Mathématiques', 'Physique-Chimie', 'SVT', 'Technologie', 'Français', 'Philosophie', 'Histoire-Géographie', 'SES', 'Education musicale', 'Arts Plastiques'];
         foreach ($subjects as $subjectName) {
-            $subject = new Subject(); 
+            $subject = new Subject();
             $subject->setName($subjectName);
             $manager->persist($subject);
+        }
+
+        for ($i = 0; $i < 10; $i++) {
+            $document = new Document();
+            $document->setCreatedAt(new DateTimeImmutable())
+                ->setTitle('Document ' . $i);
+            $manager->persist($document);
         }
 
         $manager->flush();

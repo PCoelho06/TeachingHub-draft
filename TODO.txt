@@ -9,11 +9,12 @@
 // TODO Step 2 : DocController
 //      [x] Search Document / Show Documents
 //          TODO Add javascript for search selects to filter data
-            TODO fixtures for Documents
+            ✅ TODO fixtures for Documents
             TODO search form styles
             TODO documents presentation style
-//      [ ] Show Document
-//      [ ] Add Document / Edit Document
+//      [x] Show Document
+//      [x] Add Document
+        [ ] Edit Document
 //      [ ] Delete Document
 
 // TODO Step 3 : CommentController
@@ -37,3 +38,11 @@
 
 // TODO Effets & animations
 //      [ ] Effet soulignement liens
+
+TODO Add feature contect(twitter style for documents with problems)
+
+Reflexions : 
+- Peut-être ajouter information de cycle au niveau en BDD (pour usage de couleurs plus tard par exemple)
+- Accepter plus de formats de fichiers (Pour le moment uniquement pdf et latex) : doc/docx, odt, ppt, ggb, ?
+- proposer plusieurs formats de fichier pour un document (transformation en pdf onthego avec API ilovepdf)
+- chercher une API permettant de convertir des fichiers latex en pdf onthego
